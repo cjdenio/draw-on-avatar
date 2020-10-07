@@ -15,7 +15,11 @@ export default async (req: NowRequest, res: NowResponse) => {
     res.send(
       `Your token is <b>${
         (resp.authed_user as any).access_token
-      }</b>. Please set this to the <pre>SLACK_USER_TOKEN</pre> environment variable.`
+      }</b>. Please set this to the <pre>SLACK_USER_TOKEN</pre> environment variable.
+      <hr />
+      Your bot token is <b>${
+        resp.access_token
+      }</b>. Please set this to the <pre>SLACK_BOT_TOKEN</pre> environment variable.`
     );
   } else {
     res.setHeader(
