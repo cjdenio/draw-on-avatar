@@ -55,7 +55,7 @@
       <canvas ref="canvas" id="canvas" width="512" height="512"></canvas>
       <div class="buttons">
         <v-btn color="primary" @click="save()" :loading="upload.loading"
-          >Upload <v-icon right dark>mdi-cloud-upload</v-icon></v-btn
+          >Save <v-icon right dark>mdi-cloud-upload</v-icon></v-btn
         >
         <v-btn color="error" @click="clear()"
           >Clear <v-icon right dark>mdi-delete</v-icon></v-btn
