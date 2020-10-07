@@ -3,7 +3,7 @@ import cookie from "cookie";
 import { WebClient } from "@slack/web-api";
 
 export default async (req: NowRequest, res: NowResponse) => {
-  const cookies = cookie.parse(req.headers.cookie);
+  const cookies = cookie.parse(req.headers.cookie || "");
 
   if (!cookies.token) {
     res.status(400);
