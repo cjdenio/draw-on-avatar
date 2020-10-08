@@ -3,13 +3,13 @@ import { WebClient } from "@slack/web-api";
 import cookie from "cookie";
 
 export default (req: NowRequest, res: NowResponse) => {
-  if (
-    new URL(req.headers.origin).host != req.headers["x-vercel-deployment-url"]
-  ) {
-    // Silently disallow requests from other origins
-    res.json({ ok: true });
-    return;
-  }
+  // if (
+  //   new URL(req.headers.origin).host != req.headers["x-vercel-deployment-url"]
+  // ) {
+  //   // Silently disallow requests from other origins
+  //   res.json({ ok: true });
+  //   return;
+  // }
 
   try {
     let data = [];
