@@ -132,7 +132,11 @@ export default {
           this.upload.snackbar = true;
         } catch (e) {
           this.upload.loading = false;
-          alert("Something went wrong");
+          if (e.response.data.message) {
+            alert(e.response.data.message);
+          } else {
+            alert("Something went wrong");
+          }
         }
       });
     },
