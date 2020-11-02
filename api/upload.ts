@@ -2,7 +2,9 @@ import { NowRequest, NowResponse } from "@vercel/node";
 import { WebClient } from "@slack/web-api";
 import cookie from "cookie";
 
-const banlist = ["U01ARQ7M5UL"];
+const banlist = [
+  //"U01ARQ7M5UL"
+];
 
 export default (req: NowRequest, res: NowResponse) => {
   if (
