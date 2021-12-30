@@ -4,6 +4,7 @@ import cookie from "cookie";
 
 const banlist = [
   //"U01ARQ7M5UL"
+  "U02L229K41F",
 ];
 
 export default (req: NowRequest, res: NowResponse) => {
